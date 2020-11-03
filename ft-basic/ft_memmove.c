@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:06:33 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 18:06:34 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/03 19:10:43 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t 				i;
+	size_t				i;
 	unsigned char		*pdest;
 	const unsigned char	*psrc;
 
@@ -27,10 +27,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		{
 			i--;
 			pdest[i] = psrc[i];
-			
 		}
 	}
-	else 
-		ft_memcpy(dest,src,n);
+	else
+		ft_memcpy(dest, src, n);
 	return (dest);
 }

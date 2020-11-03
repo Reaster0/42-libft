@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:05:52 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 18:05:53 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/03 18:55:47 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t 				i;
+	size_t				i;
 	unsigned char		*pdest;
 	const unsigned char	*psrc;
 

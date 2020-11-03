@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:04:17 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 18:04:20 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/03 18:54:23 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ int		ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-
 	return (0);
 }

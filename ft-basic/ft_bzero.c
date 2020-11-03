@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:03:53 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 18:04:03 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/03 18:48:40 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s,0,n);
+	ft_memset(s, 0, n);
 }
