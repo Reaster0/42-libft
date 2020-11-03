@@ -6,15 +6,15 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 15:29:03 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/02 19:01:09 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/03 14:33:06 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+size_t		ft_strlen(const char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i])
@@ -128,7 +128,7 @@ int		ft_strncmp(char *str1, char *str2, int size)
 	return (0);
 }
 
-size_t	*ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	int i;
 
@@ -139,7 +139,7 @@ size_t	*ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	return (ft_strlen(src));
 }
 
 void	*ft_memset(void *str, int c, size_t n)
