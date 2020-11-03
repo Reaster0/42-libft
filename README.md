@@ -1,1 +1,1 @@
-# 42-projects
+# 42-libft
