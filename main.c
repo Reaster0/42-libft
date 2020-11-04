@@ -1,18 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/04 18:40:30 by earnaud           #+#    #+#             */
+/*   Updated: 2020/11/04 18:53:59 by earnaud          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int main(int argc,char **argv)
 {
-	{
-		char *test2 = malloc(20);
-		char *test3 = malloc(20);
+	char	*text = argv[1];
+	char		word = argv[2][0];
+	unsigned char	*result = memchr(text,word,ft_strlen(text));
+	unsigned char	*result2 = ft_memchr(text,word,ft_strlen(text));
 
-		ft_strlcpy(test3,"Hello World!",11);
-		ft_strlcpy(test2,"Hello World!",11);
-		printf("test2 = :%s\n",test2);
-		memmove(&test3[6],&test3[2],12);
-		ft_memmove(&test2[6],&test2[2],12);
-		printf("ma fonction donne = :%s\n",test2);
-		printf("\net la vraie donne :%s",test3);
-	}
+	printf("la vraie fonction a trouvée :%c\n dans :%s\n ici :%s\n"
+			,(int)word,text,result);
+printf("ma fonction fonction a trouvée :%c\n dans :%s\n ici :%s\n"
+			,(int)word,text,result2);
+
 }
 
