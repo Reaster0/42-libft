@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 18:40:30 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/05 14:49:51 by earnaud          ###   ########.fr       */
+/*   Created: 2020/11/05 13:15:17 by earnaud           #+#    #+#             */
+/*   Updated: 2020/11/05 14:52:16 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(int argc,char **argv)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char destination[40] = "ceci est un test";
-	char *source = "hello world!";
-	char dst[40] = "ceci est un test";
-	char *src = "hello world!";
+	size_t i;
+	size_t c;
+	size_t len_dst;
+	size_t len_src;
 
-	printf("=%s\n",destination);
-printf(":%s\n:%d\n:%s\n",source,st_strlcat(destination,source,29),destination);
-
-	printf("\n\n=%s\n",dst);
-printf(":%s\n:%d\n:%s\n",src,ft_strlcat(dst,src,29),dst);
-
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	c = 0;
+	i = ft_strlen(dst);
+	if (size < len_dst + 1)
+		return (size + len_src);
+	if (size > len_dst + 1)
+	{
+		while (i < size - 1)
+		{
+			dst[i] = src[c];
+			i++;
+			c++;
+		}
+		dst[i] = 0;
+	}
+	return (len_dst + len_src);
 }
-
