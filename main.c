@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 18:40:30 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/05 14:49:51 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/05 18:33:54 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 int main(int argc,char **argv)
 {
-	char destination[40] = "ceci est un test";
-	char *source = "hello world!";
-	char dst[40] = "ceci est un test";
-	char *src = "hello world!";
+	char *test1  = argv[1];
+	char *test2 = argv[2];
+	int len = atoi(argv[3]);
 
-	printf("=%s\n",destination);
-printf(":%s\n:%d\n:%s\n",source,st_strlcat(destination,source,29),destination);
-
-	printf("\n\n=%s\n",dst);
-printf(":%s\n:%d\n:%s\n",src,ft_strlcat(dst,src,29),dst);
+	printf("\ntest1 :%s\ntest2 :%s\nlen :%d\n",test1,test2,len);
+	printf("\nla vraie fonction a trouvee :%s\n",st_strnstr(test1,test2,len));
+	printf("\nma fonction a touvee :%s\n",ft_strnstr(test1,test2,len));
 
 }
 
