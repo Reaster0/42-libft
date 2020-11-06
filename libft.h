@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:57:37 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/05 18:56:01 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/06 13:07:34 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 int 	ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nmemb, size_t size);
+
 #endif

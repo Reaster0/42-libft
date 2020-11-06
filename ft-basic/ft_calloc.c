@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 18:40:30 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/06 14:02:52 by earnaud          ###   ########.fr       */
+/*   Created: 2020/11/06 12:56:07 by earnaud           #+#    #+#             */
+/*   Updated: 2020/11/06 14:06:53 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(int argc,char **argv)
+void 	*ft_calloc(size_t nmemb, size_t size)
 {
-	int n = atoi(argv[1]);
-	int *a;
-	int i;
+	void *result;
 
-
-a = (int *)ft_calloc(n,sizeof(int));
-	printf("Enter %d numbers:\n",n);
-	for( i=0 ; i < n ; i++ ) {
-		scanf("%d",&a[i]);
-	}
-
-
-	printf("The numbers entered are: ");
-	for( i=0 ; i < n ; i++ ) {
-		printf("%d ",a[i]);
-	}
-	free( a );
+	if ((result = malloc(nmemb * size)))
+		ft_bzero(result, nmemb * size);
+	return (result);
 }
