@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 18:40:30 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/06 14:02:52 by earnaud          ###   ########.fr       */
+/*   Created: 2020/11/07 15:06:11 by earnaud           #+#    #+#             */
+/*   Updated: 2020/11/07 15:33:53 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(int argc,char **argv)
+char	*ft_strdup(const char *s)
 {
-	int n = atoi(argv[1]);
-	int *a;
-	int i;
+	char *result;
 
-
-a = (int *)ft_calloc(n,sizeof(int));
-	printf("Enter %d numbers:\n",n);
-	for( i=0 ; i < n ; i++ ) {
-		scanf("%d",&a[i]);
-	}
-
-
-	printf("The numbers entered are: ");
-	for( i=0 ; i < n ; i++ ) {
-		printf("%d ",a[i]);
-	}
-	free( a );
+	result = malloc(ft_strlen(s) * sizeof(char));
+	ft_strlcpy(result,s,ft_strlen(s));
+	return (result);
 }
