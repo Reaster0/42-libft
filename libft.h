@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:57:37 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/07 15:05:53 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/07 17:21:05 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int     ft_isascii(int c);
+int		ft_isalnum(int c);
 int     ft_isprint(int c);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
