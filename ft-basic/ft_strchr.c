@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:03:22 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 18:23:08 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/07 19:32:06 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(char *str, int c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < ft_strlen(str))
