@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/07 15:57:21 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/07 16:08:59 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,9 @@ CFLAGS		= -Wall -Werror -Wextra -I. -c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
+
+copy:
+	cp -f ft_basic/*.c .
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
