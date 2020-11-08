@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 18:05:39 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/03 19:08:42 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/08 14:45:31 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (psrc[i] == (unsigned char)c)
-		{
-			pdest[i] = psrc[i];
-			break ;
-		}
 		pdest[i] = psrc[i];
+		if (psrc[i] == (unsigned char)c)
+			return (dest + i + 1);
 		i++;
 	}
-	return (dest);
+	return (0);
 }
