@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 15:06:11 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/08 18:35:50 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/09 15:38:15 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ char	*ft_strdup(const char *s)
 	char *result;
 
 	result = malloc(ft_strlen(s) * sizeof(char));
-	ft_strlcpy(result,s,ft_strlen(s) + 1);
+	ft_strlcpy(result, s, ft_strlen(s) + 1);
 	return (result);
 }

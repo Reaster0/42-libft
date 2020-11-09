@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 17:21:09 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/05 18:31:59 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/09 15:37:06 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				j++;
 			}
 			else
-				break;
+				break ;
 		}
 		i++;
 	}
