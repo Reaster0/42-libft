@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 18:14:41 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/10 13:10:36 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/11 18:53:52 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (j && j > i && ft_strchr((char *)set, s1[j]))
 		j--;
-	result = ft_substr(s1, i, j - i + 1);	
+	result = ft_substr(s1, i, j - i + 1);
 	return (result);
 }
-

@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/07 16:45:29 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/10 13:32:54 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,11 @@ FILES		= ft_atoi.c \
 			  ft_memcpy.c \
 			  ft_strdup.c \
 			  ft_strncmp.c \
-			  ft_toupper.c 
+			  ft_toupper.c \
+			  ft_substr.c \
+			  ft_strjoin.c \
+			  ft_strtrim.c \
+			  ft_split.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
 
@@ -43,6 +47,7 @@ all: $(NAME)
 
 copy:
 	cp -f ft-basic/*.c .
+	cp -f ft-more/*.c .
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
