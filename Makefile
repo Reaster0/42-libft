@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/12 16:56:41 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/12 17:04:31 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ FILES		= ft_atoi.c \
 			  ft_strmapi.c \
 			  ft_putchar_fd.c \
 			  ft_putstr_fd.c \
-			  ft_putendl_fd.c
+			  ft_putendl_fd.c \
+			  ft_putnbr_fd.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
 
