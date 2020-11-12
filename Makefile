@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/10 13:32:54 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/12 13:01:03 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,8 @@ FILES		= ft_atoi.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
-			  ft_split.c
+			  ft_split.c \
+			  ft_itoa.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
 
