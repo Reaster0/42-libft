@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/12 17:04:31 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/14 23:15:53 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,14 +46,13 @@ FILES		= ft_atoi.c \
 			  ft_putstr_fd.c \
 			  ft_putendl_fd.c \
 			  ft_putnbr_fd.c
+
+BONUS_FILES = ft_lstnew.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
+BONUS_OBJS	= $(BONUS_FILES:%.c=%.o)
 
-all: $(NAME)
-
-copy:
-	cp -f ft-basic/*.c .
-	cp -f ft-more/*.c .
+all: $(NAME) bonus
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
@@ -61,12 +60,19 @@ $(NAME): $(OBJ)
 $(OBJ): $(FILES)
 	gcc $(CFLAGS) $(FILES)
 
+bonus: $(BONUS_OBJS) 
+	ar rcs $(NAME) $(BONUS_OBJS)
+
+$(BONUS_OBJS): $(BONUS_FILES)
+	gcc $(CFLAGS) $(BONUS_FILES)
+
 clean:
 	rm -f $(OBJ)
+	rm -f $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean all re copy
+.PHONY: clean fclean all re bonus
