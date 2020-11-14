@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 12:54:34 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/12 15:01:36 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/14 16:15:57 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	size = ft_size(n);
-	result = malloc(size * sizeof(char));
+	if (!(result = malloc((size + 1) * sizeof(char))))
+		return (0);
 	result[size--] = 0;
 	if (nbr < 0)
 	{

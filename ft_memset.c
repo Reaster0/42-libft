@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 16:13:27 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/09 17:08:30 by earnaud          ###   ########.fr       */
+/*   Created: 2020/11/03 18:06:42 by earnaud           #+#    #+#             */
+/*   Updated: 2020/11/13 11:54:49 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	char *result;
+	size_t	i;
+	char	*pstr;
 
-	if (!(result = malloc(len * sizeof(char))))
-		return (0);
-	ft_strlcpy(result, s + start, len + 1);
-	return (result);
+	i = 0;
+	pstr = str;
+	while (i < n)
+	{
+		pstr[i] = (unsigned char)c;
+		i++;
+	}
+	return (str);
 }

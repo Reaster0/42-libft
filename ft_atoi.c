@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:55:14 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/09 15:47:45 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/13 14:51:23 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,26 @@
 
 int		ft_atoi(const char *nptr)
 {
-	size_t	i;
-	int		result;
-	int		negative;
+	int				i;
+	long long int	result;
+	int				negative;
 
-	negative = 0;
+	negative = 1;
 	i = 0;
 	result = 0;
 	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n' ||
 			nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
 		i++;
-	if (nptr[i] == '+' && nptr[i + 1] >= '0' && nptr[i + 1] <= '9')
-		i++;
 	if (nptr[i] == '-')
-	{
-		negative = 1;
+		negative = -1;
+	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
+	while (ft_isdigit(nptr[i]))
+	{	
+		result += nptr[i] - '0';
+		result *= ft_isdigit(nptr[++i]) ? 10 : 1;
+		if (result < 0)
+			return (negative == 1 ? -1 : 0);	
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result *= 10;
-		result += nptr[i++] - 48;
-	}
-	if (negative)
-		result = -result;
-	return (result);
+	return ((int)result * negative);
 }

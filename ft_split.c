@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:31:58 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/11 20:00:58 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/14 15:27:28 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ char	**ft_free_neo(char **neo)
 	size_t i;
 
 	i = 0;
-	while (neo[i])
-		free(neo[i++]);
-	free(neo);
+	if(neo)
+	{
+		while (neo[i])
+			free(neo[i++]);
+		free(neo);
+	}
 	return (0);
 }
 
@@ -74,9 +77,8 @@ char	**ft_split(char const *s, char c)
 		while (s[k] == c)
 			k++;
 		j = ft_strllen(s, k, c);
-		if (!(result[i] = malloc((j + 1) * sizeof(char))))
+		if (!(result[i] = ft_substr(s, k, j)))
 			return (ft_free_neo(result));
-		result[i] = ft_substr(s, k, j);
 		i++;
 	}
 	return (result);
