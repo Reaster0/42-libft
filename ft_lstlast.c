@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 18:42:27 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/15 18:57:38 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 19:23:20 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	size_t i;
-
-	i = 0;
+	if (!(lst))
+		return (0);
 	while (lst->next)
-	{
 		lst = lst->next;
-		i++;
-	}
-	return (i);
+	return (lst);
 }
