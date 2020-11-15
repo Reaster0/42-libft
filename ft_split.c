@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:31:58 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/14 15:27:28 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 18:28:20 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char	**ft_split(char const *s, char c)
 	words = ft_nbrword(s, c);
 	i = 0;
 	j = 0;
+	k = 0;
 	if (!(result = malloc((words + 1) * sizeof(char *))))
 		return (ft_free_neo(result));
 	while (i < words)
@@ -81,5 +82,6 @@ char	**ft_split(char const *s, char c)
 			return (ft_free_neo(result));
 		i++;
 	}
+	result[words] = 0;
 	return (result);
 }

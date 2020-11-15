@@ -6,12 +6,12 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/15 17:41:52 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/15 18:05:59 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
+CFLAGS		= -Wall -Wextra -Werror -I. -c
 FILES		= ft_atoi.c \
 			  ft_isalpha.c \
 			  ft_memccpy.c \
