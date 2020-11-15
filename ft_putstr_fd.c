@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 16:45:00 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/12 16:50:15 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 20:04:27 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		write(fd, &s[i++], 1);
 }

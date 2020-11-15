@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:31:58 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/15 18:28:20 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 20:04:47 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**ft_free_neo(char **neo)
 	size_t i;
 
 	i = 0;
-	if(neo)
+	if (neo)
 	{
 		while (neo[i])
 			free(neo[i++]);

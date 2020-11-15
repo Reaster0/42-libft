@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:05:31 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/14 22:51:55 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 20:03:45 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ t_list	*ft_lstnew(void *content)
 	if (!(result = malloc(sizeof(t_list))))
 		return (0);
 	result->content = content;
-	result-> next = 0;
+	result->next = 0;
 	return (result);
 }

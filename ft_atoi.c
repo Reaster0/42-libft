@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 18:55:14 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/13 14:51:23 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/15 20:02:54 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int		ft_atoi(const char *nptr)
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
 	while (ft_isdigit(nptr[i]))
-	{	
+	{
 		result += nptr[i] - '0';
 		result *= ft_isdigit(nptr[++i]) ? 10 : 1;
 		if (result < 0)
-			return (negative == 1 ? -1 : 0);	
+			return (negative == 1 ? -1 : 0);
 	}
 	return ((int)result * negative);
 }
