@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/15 16:38:09 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/15 17:41:52 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ FILES		= ft_atoi.c \
 			  ft_putnbr_fd.c
 
 BONUS_FILES = ft_lstnew.c \
-			  ft_lstadd_front.c
+			  ft_lstadd_front.c \
+			  ft_lstsize.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
 BONUS_OBJS	= $(BONUS_FILES:%.c=%.o)
