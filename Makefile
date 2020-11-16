@@ -6,7 +6,7 @@
 #    By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/07 15:42:07 by earnaud           #+#    #+#              #
-#    Updated: 2020/11/16 13:41:02 by earnaud          ###   ########.fr        #
+#    Updated: 2020/11/16 17:21:11 by earnaud          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ BONUS_FILES = ft_lstnew.c \
 			  ft_lstadd_back.c \
 			  ft_lstdelone.c \
 			  ft_lstclear.c \
-			  ft_lstiter.c
+			  ft_lstiter.c \
+			  ft_lstmap.c
 			  	
 OBJ			= $(FILES:%.c=%.o)
 BONUS_OBJS	= $(BONUS_FILES:%.c=%.o)
