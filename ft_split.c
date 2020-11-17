@@ -6,13 +6,13 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 13:31:58 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/15 20:04:47 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/11/17 19:13:04 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_free_neo(char **neo)
+static char		**ft_free_neo(char **neo)
 {
 	size_t i;
 
@@ -26,7 +26,7 @@ char	**ft_free_neo(char **neo)
 	return (0);
 }
 
-size_t	ft_strllen(char const *s, size_t start, char c)
+static size_t	ft_strllen(char const *s, size_t start, char c)
 {
 	size_t i;
 
@@ -39,7 +39,7 @@ size_t	ft_strllen(char const *s, size_t start, char c)
 	return (i);
 }
 
-size_t	ft_nbrword(char const *s, char c)
+static size_t	ft_nbrword(char const *s, char c)
 {
 	size_t i;
 	size_t result;
@@ -58,7 +58,7 @@ size_t	ft_nbrword(char const *s, char c)
 	return (result);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**result;
 	size_t	i;
