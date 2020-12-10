@@ -6,16 +6,16 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 12:54:34 by earnaud           #+#    #+#             */
-/*   Updated: 2020/11/17 19:04:17 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/12/10 12:12:45 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_size(int n)
+static size_t	ft_size(long int n)
 {
-	size_t		result;
-	long int	nbr;
+	size_t			result;
+	long long int	nbr;
 
 	nbr = n;
 	result = 0;
@@ -37,11 +37,11 @@ static size_t	ft_size(int n)
 	return (result);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(long int n)
 {
-	char	*result;
-	size_t	size;
-	long	nbr;
+	char		*result;
+	size_t		size;
+	long int	nbr;
 
 	nbr = n;
 	size = ft_size(n);

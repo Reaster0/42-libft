@@ -6,7 +6,7 @@
 /*   By: earnaud <earnaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 12:57:37 by earnaud           #+#    #+#             */
-/*   Updated: 2020/12/08 18:15:51 by earnaud          ###   ########.fr       */
+/*   Updated: 2020/12/10 12:19:13 by earnaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
